@@ -1,0 +1,14 @@
+syntax = "proto3";
+option go_package="/message";
+
+message HelloWorldInput {
+  string name = 1;
+}
+
+message HelloWorldOutput {
+  string greeting = 1;
+}
+
+service HelloWorldService {
+  rpc HelloWorld(HelloWorldInput) returns (HelloWorldOutput);
+}
